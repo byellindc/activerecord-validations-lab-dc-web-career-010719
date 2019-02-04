@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'pry'
+
 
 RSpec.describe Post, type: :model do
   let(:content) { "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus, nulla vel condimentum ornare, arcu lorem hendrerit purus, ac sagittis ipsum nisl nec erat. Morbi porta sollicitudin leo, eu cursus libero posuere ac. Sed ac ultricies ante. Donec nec nulla ipsum. Nunc eleifend, ligula ut volutpat." }
@@ -40,6 +42,7 @@ RSpec.describe Post, type: :model do
   end
 
   it "is invalid if not clickbait" do
+    # binding.pry
     expect(non_clickbait).to be_invalid
   end
 end
